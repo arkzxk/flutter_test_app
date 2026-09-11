@@ -4,19 +4,37 @@ void main() {
   runApp(MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: Text('Card'),
+        title: Text('Beautiful Card'),
       ),
       body: Center(
         child: Card(
-          color: Colors.green,
-          elevation: 20.0,
-          shadowColor: Colors.red,
-          child: Text(
-            'A Simple Card Widget',
-            style: TextStyle(fontSize: 35),
+          child: Column(
+              children: [
+                Container(
+                  child: Image.asset('assets/24864.jpg', width: 300, height: 300,),
+                ),
+                Container(
+                  child:
+                    Text('Duncan Garcia          P30.00',
+                    style:
+                      TextStyle(
+                        fontSize: 22,
+                    ),
+                  ),
+                ),
+                Container(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      print('Item purchased.');
+                    },
+                    child: Text('Purchase now!'),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
     ),
-  ),);
+  );
 }
