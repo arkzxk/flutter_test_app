@@ -4,25 +4,9 @@ void main() {
   runApp(MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: Text('Column and Row'),
+        title: Text('Asset Image'),
       ),
-      body: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Container(
-            width: 80,
-            color: Colors.red,
-          ),
-          Container(
-            width: 120,
-            color: Colors.green,
-          ),
-          Container(
-            width: 150,
-            color: Colors.purple,
-          )
-        ],
-      ),
+      body: Image.asset('assets/sample_photo.jpeg'),
     ),
   ),);
 }
