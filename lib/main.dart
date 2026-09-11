@@ -3,14 +3,20 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
-      body: Container(
-        color: Colors.teal,
-        width: 200,
-        height: 200,
-        margin: EdgeInsets.all(30),
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-        child: Text('Hello World'),
-      ),
+      body: Center(
+        child: OutlinedButton(
+          style: OutlinedButton.styleFrom(
+            minimumSize: Size(200, 80),
+            textStyle: TextStyle(fontSize: 30),
+            foregroundColor: Colors.blue,
+            side: BorderSide(color: Colors.blue, width: 3),
+          ),
+          onPressed: () {
+            print('button clicked');
+          },
+          child: Text('Outlined Button')
+        ),
+      )
     ),
   ),);
 }
